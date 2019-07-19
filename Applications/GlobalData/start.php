@@ -2,8 +2,7 @@
 
 use Workerman\Worker;
 
-
-require_once __DIR__ . '/../../Workerman/Autoloader.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/Server.php';
 
 // 监听端口

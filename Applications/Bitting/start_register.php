@@ -15,7 +15,7 @@ use \Workerman\Worker;
 use \GatewayWorker\Register;
 
 // 自动加载类
-require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/loader.php';
 
 $register = new Register('Text://'.Config\Gateway::$register_address.':'.Config\Gateway::$register_port);
 
