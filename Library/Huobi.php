@@ -40,4 +40,4 @@ class Huobi
 		unset($data);
 		return $array['data'];
 	}
-} 
+}

@@ -9,7 +9,7 @@ use Timer\Base;
  * @author Minch<yeah@minch.me>
  * @since 2019-05-27
  */
-class Tasktimer extends Base
+class Currencys extends Base
 {
 	/**
 	 * 执行定时任务
@@ -19,10 +19,12 @@ class Tasktimer extends Base
 	    if(!$this->getlock()){
 	        return false;
 	    }
-	    echo 'symbols:' . PHP_EOL;
-	    var_dump($this->globaldata->symbols);
-	    echo 'currencys:' . PHP_EOL;
-	    var_dump($this->globaldata->currencys);
+	    try{
+	    	$currencys = $this->huobi->currencys();
+	    	$this->globaldata->add('currencys', $currencys);
+	    } catch (Exception $e) {
+            return false;
+        }
 		$this->unlock();
 		$this->wait();
 	}

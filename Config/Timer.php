@@ -27,7 +27,9 @@ class Timer
      * ) <br />
      */
     public static $modules = array(
-            'Tasktimer'=>1, //业务定时器表(通用)
+            'Tasktimer'=>30, //业务定时器表(通用)
+            'Common/Symbols'=>60, //业务定时器表(通用)
+            'Common/Currencys'=>60, //业务定时器表(通用)
         );
     
     /**
