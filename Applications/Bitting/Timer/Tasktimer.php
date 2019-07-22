@@ -19,10 +19,6 @@ class Tasktimer extends Base
 	    if(!$this->getlock()){
 	        return false;
 	    }
-	    echo 'symbols:' . PHP_EOL;
-	    var_dump($this->globaldata->symbols);
-	    echo 'currencys:' . PHP_EOL;
-	    var_dump($this->globaldata->currencys);
 		$this->unlock();
 		$this->wait();
 	}

@@ -73,11 +73,11 @@ abstract class Base
         // 链接业务网关
         $this->sign = \Config\Timer::$gateway_sign;
         $this->gateway = 'tcp://' . \Config\Gateway::$address . ':' . \Config\Gateway::$port;
-        //$this->conn = new AsyncTcpConnection($this->gateway);
-        //$this->conn->connect();
+        $this->conn = new AsyncTcpConnection($this->gateway);
+        $this->conn->connect();
         // 共享组件初始化
         $this->globaldata = new GlobalDataClient(\Config\GlobalData::$address . ':' . \Config\GlobalData::$port);
-        $this->hb = new Huobi();
+        $this->huobi = new Huobi();
     }
 
     /**
