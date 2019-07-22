@@ -4,6 +4,7 @@ namespace Timer;
 
 use \Library\Db;
 use \Library\DbConnection;
+use \Library\Huobi;
 use \Library\Log;
 use \Library\GlobalDataClient;
 use \Workerman\Connection\AsyncTcpConnection;
@@ -68,7 +69,7 @@ abstract class Base
      */
     protected function __construct()
     {
-        $this->db = Db::instance(\Config\Database::$slave);
+        //$this->db = Db::instance(\Config\Database::$slave);
         // 链接业务网关
         $this->sign = \Config\Timer::$gateway_sign;
         $this->gateway = 'tcp://' . \Config\Gateway::$address . ':' . \Config\Gateway::$port;

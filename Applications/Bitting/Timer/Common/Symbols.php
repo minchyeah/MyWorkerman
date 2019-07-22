@@ -1,6 +1,6 @@
 <?php
 
-namespace Timer;
+namespace Timer\Common;
 
 use Timer\Base;
 use Library\Huobi;
